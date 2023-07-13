@@ -1,6 +1,9 @@
 # TP Integrador en React
+Hemos desarrollado un proyecto integrador en React que utiliza todos los conceptos aprendidos hasta ahora, incluyendo la implementación de metodologías ágiles como Scrum, y aplicando buenas prácticas de programación. El proyecto se llama TripWork y es una aplicación de página única (SPA) que conecta a clientes y usuarios trabajadores para contratarlos en diferentes proyectos laborales.
 
-Proyecto integrador hecho en React, utilizando todos los conceptos utilizados hasta el momento, como la implementacion de metodologias Ágiles, como **Scrum**, y aplicando buenas prácticas de programación. El proyecto en cuestion se trata de **TripWork**, un SPA  que actua de nexo entre clientes y casas de comida para que puedan, de forma mas cómoda, comprar o vender sus productos. Consta de un **Index** en el que puede navegar cualquier usuario, pero para interactuar en el sitio tendra un **Register**, y luego un **Login**, para realizar operaciones *CRUD*. Los integrantes del proyecto son:
+La aplicación consta de una página de inicio (Index) accesible para cualquier usuario, pero para interactuar en el sitio es necesario registrarse (Register) y luego iniciar sesión (Login) para realizar operaciones CRUD.
+
+Los miembros del equipo que han trabajado en este proyecto son:
 
  - Yohana Mailen Lopez
 
