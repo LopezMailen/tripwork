@@ -28,7 +28,7 @@ function Index() {
     }, []);
 
     const message = show ? "Ocultar Perfiles" : "Ver Perfiles";
-    const containerClassName = show ? 'show' : 'hide';
+   const containerClassName = show ? 'show' : 'hide';
 
     const handleClick = () => {
         setShow(!show)
@@ -39,19 +39,29 @@ function Index() {
             <Header />
             <main>
                 <div className="description">
-                    <section className="section-position">
-                        <h3>Viví la experiencia de viajar y trabajar por el mundo</h3>
-                        <p>No busques a alguien que haga el trabajo, busca a alguien que comparta tu visión y tu pasión</p>
-                        <img className="banner" src="/src/assets/banner_home.png" />
-                    </section>
+                    
                     <section className="button-position">
                         {user ? (
+                            
                             <div>
+                                   <div className={containerClassName}>
+                <section className='card-container'>
+                    <SearchMenu worker={workers} />
+                    {/* <Workers worker={workers} /> */}
+                </section>
+            </div>
+                              
                                 <Link to={"/LoadOffer.jsx"}><button className="btn1">Publica tu Perfil</button></Link>
                                 <button className="btnperfil" onClick={handleClick}>{message}</button>
                             </div>
                         ) : (
+                            
                             <div>
+                                <section className="section-position">
+                        <h3>Viví la experiencia de viajar y trabajar por el mundo</h3>
+                        <p>No busques a alguien que haga el trabajo, busca a alguien que comparta tu visión y tu pasión</p>
+                        <img className="banner" src="/src/assets/banner_home.png" />
+                    </section>
                                 <Link to={"/Login.jsx"}><button className="btn1">Publica tu Perfil</button></Link>
                                 <button className="btnperfil" onClick={handleClick}>{message}</button>
                                 
@@ -62,15 +72,15 @@ function Index() {
                 </div>
               
             </main>
-            <div className={containerClassName}>
-                <section className='card-container'>
-                    <SearchMenu worker={workers} />
-                    {/* <Workers worker={workers} /> */}
-                </section>
-            </div>
+        
             <Footer />
         </>
     )
 }
 
 export default Index;
+
+
+//Index utiliza el hook useState para manejar el estado local del componente y el hook useEffect para realizar una 
+//solicitud a la API y obtener los datos de los trabajadores al cargar la página. Además, utiliza el contexto UserContext
+// para obtener el estado de autenticación global y mostrar contenido específico según si el usuario está autenticado o no.

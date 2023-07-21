@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 
-const users_url = "https://647a6c7ed2e5b6101db05858.mockapi.io/users";
+
+const users_url = "https://64b06fcfc60b8f941af5b644.mockapi.io/users"; //2
 
 function Login() {
 

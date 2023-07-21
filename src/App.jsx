@@ -8,6 +8,7 @@ import LoadOffer from './views/pages/LoadOffer.jsx';
 import Contact from './views/pages/Contact';
 import { Routes, Route } from "react-router-dom";
 
+
 import { UserProvider } from './UserContext';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route exact path='/Us.jsx' element={<Us />} />
           <Route exact path='/LoadOffer.jsx' element={<LoadOffer />} />
           <Route exact path='/Contact.jsx' element={<Contact />} />
+          
           <Route exact path='*' element={<div><h1>Pagina no encontrada</h1></div>} />
         </Routes>
       </UserProvider>

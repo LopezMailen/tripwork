@@ -79,7 +79,7 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 400px;
+  margin-top: 30px;
 }
 
 .show {
@@ -238,7 +238,7 @@ ul li {
 main {
   display: flex;
   justify-content: space-around;
-  margin-top: 180px;
+  margin-top: 100px;
 }
 
 .photo-container {
@@ -485,8 +485,8 @@ main {
   margin: 0 auto;
   max-width: 400px;
   padding: 20px;
-  border: 1px solid #ffffff;
-  border-radius: 7px;
+  border: 4px solid#2a78ea;
+  border-radius: 5px;
   background-color: #ffffff;
 }
 
@@ -514,20 +514,53 @@ main {
   border-radius: 10px;
 }
 
-#registroNuevoUsuario button[type="submit"],
-#registroNuevoUsuario button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #4caf82;
-  color: white;
-  cursor: pointer;
+#registroNuevoUsuario button[type="submit-regresar"]
+{
+  color: #fff;
+  font: 700 16px "Poppins", sans-serif;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #f4f6f8;
+  padding: 5px 30px;
+  width: auto;
+  height: 58px;
+  position: relative;
+  background-color:#5a645a;
+  margin-left: 20px;
+}
+#registroNuevoUsuario button[type="submit-regresar"]:hover
+{
+
+  background: #FFFFFF;
+  color: #4caf50;
+  transform: scale(1.05);
+  border-color: #4caf50;
 }
 
 
-#registroNuevoUsuario button[type="submit"]:hover,
-#registroNuevoUsuario button:hover {
-  background-color: #45a049;
+
+#registroNuevoUsuario button[type="submit-register"]{
+  color: #fff;
+  font: 700 16px "Poppins", sans-serif;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #f4f6f8;
+  padding: 5px 30px;
+  width: auto;
+  height: 58px;
+  position: relative;
+  background-color:#4caf50;
+  margin-left: 20px;
+}
+
+
+#registroNuevoUsuario button[type="submit-register"]:hover
+{
+
+  background: #FFFFFF;
+  color: #4caf50;
+  transform: scale(1.05);
+  border-color: #4caf50;
 }
 
 #registroNuevoUsuario a {
@@ -538,21 +571,42 @@ main {
   text-decoration: underline;
 }
 
-.register-heading {
-  color: #FFFFFF;
-  text-align: center;
+#registroactualizar {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  border: 4px solid#2a78ea;
+  border-radius: 5px;
+  background-color: #ffffff;
+ }
+
+
+ .register-heading {
+  font-size: 50px;
+  font-weight: initial;
+  color: #2a78ea; /* Color del texto del título (#2a78ea - azul) */
+  text-align: center; /* Centrar el texto en el medio */
+  margin: 20px 0; /* Márgenes superior e inferior (ajústalos según tus preferencias) */
+  /* Otros estilos que desees agregar, como sombras, márgenes, etc. */
 }
 
 .register-description {
-  margin-bottom: 20px;
-  color: #FFFFFF;
+  font-size: 16px; /* Tamaño de fuente (ajústalo según tus preferencias) */
+  line-height: 1.5; /* Altura de línea (ajústalo según tus preferencias) */
+  color: #333; /* Color del texto (#333 - negro) */
+  text-align: center; /* Centrar el texto en el medio */
+  margin: 10px 0; /* Márgenes superior e inferior (ajústalos según tus preferencias) */
+  /* Otros estilos que desees agregar, como sombras, márgenes, etc. */
+
 }
 
 button[type="submit-register"] {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #4c57af;
+  background-color: #4caf51;
   color: white;
   cursor: pointer;
   margin-top: 15px;
@@ -563,28 +617,16 @@ button[type="submit-register"] {
 }
 
 button[type="submit-register"]:hover {
-  background-color: #4551a0;
+  background-color: #e0f336;
 }
 
 button[type="submit-register"]:focus {
   outline: none;
 }
 
-.button-volver {
-  display: inline-block;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #4c57af;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 10px;
-}
 
-.carga-oferta {
+
+.carga-perfil {
   text-align: center;
   margin-top: 10px;
   color: #f7fbff;
@@ -592,15 +634,15 @@ button[type="submit-register"]:focus {
   font-weight: bold;
 }
 
-#oferta {
+#of2 {
   display: flex;
   flex-direction: column;
-  max-width: 550px;
   margin: 0 auto;
+  max-width: 600px;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f9f9f9;
+  border: 4px solid#2a78ea;
+  border-radius: 5px;
+  background-color: #ffffff;
 }
 
 #oferta h3 {
@@ -624,7 +666,7 @@ button[type="submit-register"]:focus {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #4caf50;
+  background-color: #3359c0;
   color: white;
   cursor: pointer;
 }
@@ -648,43 +690,47 @@ button[type="submit-register"]:focus {
   text-decoration: underline;
 }
 
-.button-offer {
-  display: inline-block;
-  padding: 10px 10px;
-  border-radius: 4px;
-  background-color: #5a62ee;
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
+.button-vol {
+  color: #fff;
+  font: 700 16px "Poppins", sans-serif;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #f4f6f8;
+  padding: 5px 30px;
+  width: auto;
+  height: 58px;
+  position: relative;
+  background-color:#4caf50;
+  margin-left: 20px;
 }
 
-#registroactualizar {
+#formu-consulta {
   display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #f9f9f9;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #0d6efd;
+    border-radius: 10px;
+    background-color: #ffffff;
+    
 }
 
-#registroactualizar label {
+#formu-consulta label {
   margin-bottom: 10px;
 }
 
-#registroactualizar input[type="text"],
-#registroactualizar input[type="email"],
-#registroactualizar input[type="tel"],
-#registroactualizar input[type="password"] {
+#formu-consulta input[type="text"],
+#formu-consulta input[type="email"],
+#formu-consulta input[type="tel"],
+#formu-consulta input[type="password"] {
   width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-#registroactualizar div {
+#formu-consulta div {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -696,22 +742,37 @@ button[type="submit-register"]:focus {
   align-items: center;
 }
 
-.button-actualizar,
-.button-eliminar {
+.button-volver {
   display: inline-block;
-  padding: 5px 20px;
-  margin-right: 10px;
+  padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #4caf50;
-  color: white;
+  background-color: #ffffff;
+  color: #4c57af;
+  text-decoration: none;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
-.button-actualizar:hover,
-.button-eliminar:hover {
+.button-actualizar,
+.button-eliminar
+{
+  color: #fff;
+  font: 600 16px "Poppins", sans-serif;
+  border-radius: 32px;
+  border-style: solid;
+  border-color: #45a049;
+  padding: 0px 24px;
+  width: auto;
+  height: 43px;
+  position: relative;
   background-color: #45a049;
-}
+  margin-right: 6px;
+  margin-left: 20px;
+  margin: 20px;
+   }
 
 .button-eliminar {
   background-color: #f44336;
@@ -722,32 +783,30 @@ button[type="submit-register"]:focus {
 }
 
 .button-volver2 {
-  display: inline-block;
-  padding: 15px 25px;
-  border: none;
-  border-radius: 4px;
-  background-color: #1394da;
-  color: #ffffff;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
+  background: transparent;
+  color: #2a78ea;
+  border-color: #2a78ea;
+  border-radius: 32px;
+  border-style: solid;
+  padding: 0px 24px;
+  width: auto;
+  font: 700 16px "Poppins", sans-serif;
+  height: 43px;
+  position: relative;
+  margin-left: 20px;
+ }
 .button-volver2:hover {
-  background-color: #0c6cb7;
+  background-color: #f7f7f7;
 }
 
-.button-volver2 a {
-  color: #ffffff;
-  text-decoration: none;
-}
+
 
 .welcome-message {
   display: flex;
   align-items: center;
   margin-right: 20px;
-  color: #ffffff;
-  font-size: 16px;
+  color: #0f0000;
+  font-size: 20px;
   font-weight: 600px;
 }
 
@@ -828,4 +887,134 @@ button[type="submit-register"]:focus {
 .logo2{
 
   width: 20%;
+}
+ 
+.busqueda{
+  color: #fff;
+  font: 700 16px "Poppins", sans-serif;
+  border-radius: 50px;
+  border-style: solid;
+  border-color: #2a78ea;
+  padding: 5px 30px;
+  width: auto;
+  height: 58px;
+  position: relative;
+  background-color: #2a78ea;
+  margin-left: 20px;
+}
+ .busqueda:hover {
+  background: #FFFFFF;
+  color: #2a78ea;
+  transform: scale(1.05);
+ }
+
+
+/* Estilo CSS personalizado para el contenedor del mensaje */
+.custom-swal-container {
+  border: 2px solid #2a78ea;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Estilo CSS personalizado para el título del mensaje */
+.custom-swal-title {
+  color: #0a0703;
+  font-weight: bold;
+}
+
+/* Estilo CSS personalizado para el texto del mensaje */
+.custom-swal-content {
+  color: #333; /* Color del texto del mensaje (ajústalo según tus preferencias) */
+}
+
+/* Estilo CSS personalizado para el icono del mensaje */
+.custom-swal-icon {
+  color: #ff8800;
+}
+
+/* Estilo CSS personalizado para el botón "OK" */
+.custom-swal-confirm-button {
+  background-color:#2a78ea;; /* Color de fondo del botón (naranja) */
+  color: #fff; /* Color del texto del botón (blanco) */
+  border-radius: 4px; /* Ajustar el radio del borde según tus preferencias */
+  padding: 8px 20px; 
+}
+
+.title2-description {
+  font-size: 50px; /* Tamaño de fuente (ajústalo según tus preferencias) */
+  font-weight: bolder; /* Peso de la fuente en negrita */
+  color: #2a78ea; /* Color del texto del título (#2a78ea - azul) */
+  text-align: center; /* Centrar el texto en el medio */
+  margin: 20px 0; /* Márgenes superior e inferior (ajústalos según tus preferencias) */
+  /* Otros estilos que desees agregar, como sombras, márgenes, etc. */
+}
+
+
+
+
+div.swal2-popup {
+  /* Estilos para el popup */
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  background-color: #fff; /* Color de fondo del popup */
+  border: 2px solid #2a78ea; /* Borde del popup */
+  border-radius: 8px; /* Radio de borde */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra del popup */
+  padding: 20px; /* Relleno interno del popup */
+  max-width: 400px; /* Ancho máximo del popup */
+}
+
+div.swal2-title {
+  /* Estilos para el título del popup */
+  font-size: 24px;
+  color: #2a78ea;
+  font-weight: bold;
+  margin-bottom: 10px; /* Márgen inferior para separar el título del contenido */
+}
+
+div.swal2-content {
+  /* Estilos para el contenido del popup */
+  font-size: 16px;
+  color: #333;
+}
+
+div.swal2-actions {
+  /* Estilos para los botones de acción */
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Márgen superior para separar los botones del contenido */
+}
+
+div.swal2-actions button {
+  /* Estilos para los botones dentro del popup */
+  margin: 0 10px; /* Márgen entre los botones */
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.swal2-actions button.swal2-confirm {
+  /* Estilos específicos para el botón "Confirmar" */
+  background-color: #2a78ea;
+  color: #fff;
+}
+
+div.swal2-actions button.swal2-cancel {
+  /* Estilos específicos para el botón "Cancelar" */
+  background-color: #ccc;
+  color: #333;
+}
+
+.btn-success {
+  background-color: #2a78ea; /* Color de fondo del botón (azul) */
+  color: #fff; /* Color del texto del botón (blanco) */
+}
+
+/* Estilo para el botón de cancelación */
+.btn-danger {
+  background-color: #ff3333; /* Color de fondo del botón (rojo) */
+  color: #fff; /* Color del texto del botón (blanco) */
 }

@@ -5,7 +5,7 @@ import Footer from "../components/Footer.jsx";
 import Header from "../components/Header.jsx";
 import Swal from 'sweetalert2'
 
-const users_url = "https://647a6c7ed2e5b6101db05858.mockapi.io/users/";
+const users_url = "https://64b06fcfc60b8f941af5b644.mockapi.io/users"; //2
 
 function Register() {
 
@@ -20,7 +20,7 @@ function Register() {
     password: ""
   });
 
-  //-------------- Agregar un nuevo User -------------------//
+  //-------------- Agregar -//
 
   const addOne = (addUser) => {
     fetch(users_url, {
@@ -40,9 +40,8 @@ function Register() {
     e.preventDefault();
     let timerInterval
     Swal.fire({
-      title: 'Bienvenido a <img src="./src/assets/Food App.svg" />',
-      html: 'Espera un momento, seras redirigido....',
-      timer: 6000,
+      title: 'Ya eres parte de TriWork.  Ya puedes Iniciar Secion',
+      timer: 20000,
       timerProgressBar: true,
       didOpen: () => {
         Swal.showLoading()
@@ -91,14 +90,17 @@ function Register() {
   const handleEditSubmit = (e) => {
     e.preventDefault();
     Swal.fire({
-      title: 'Estas seguro de guardar los cambios?',
+      title: '¿Estás seguro?',
+      text: 'Estás a punto de guardar los cambios realizados.',
+      icon: 'warning',
       showDenyButton: true,
       showCancelButton: true,
       confirmButtonText: 'Guardar',
       denyButtonText: `Descartar`,
     }).then((result) => {
       if (result.isConfirmed) {
-        Swal.fire('Cambios Guardados! &#128526', '', 'success')
+        Swal.fire('Cambios guardados correctamente',
+     'success')
         editOne(user.id, editUsers);
       } else if (result.isDenied) {
         Swal.fire('Tus datos no sufrieron cambios', '', 'info')
@@ -114,7 +116,7 @@ function Register() {
     })));
   }
 
-  //-------------- Eliminar un User del registro -------------------//
+  //-------------- Eliminar//
 
   const deleteOne = (user) => {
     fetch(users_url + `${user.id}`, {
@@ -159,7 +161,7 @@ function Register() {
       ) {
         swalWithBootstrapButtons.fire(
           'Operación Cancelada',
-          'Seguis conservando tu cuenta &#128522',
+          
           'error'
         )
       }
@@ -172,8 +174,8 @@ function Register() {
       <main>
         {user ? (
           <div>
-            <h3 className="register-heading">Actualiza tus datos</h3>
-            <p className="register-description">Acá podés modificar los datos de tu cuenta</p>
+            <h3 className="register-heading">Actualizar tus datos</h3>
+            <p className="registro-descrip">Modificar tus datos</p>
             <form id="registroactualizar" onSubmit={handleEditSubmit}>
               <label htmlFor="name">
                 Nombre:
@@ -221,19 +223,19 @@ function Register() {
               </label>
               <div>
                 <div>
-                  <button className="button-actualizar" type="submit-actualizar">Actualizar Datos</button>
-                  <button className="button-eliminar" onClick={deleteUser}>Eliminar Cuenta</button>
-                </div>
+                  <button className="button-actualizar" type="submit-actualizar">Actualizar</button>
+                  <button className="button-eliminar" onClick={deleteUser}>Eliminar</button>
                 <button className="button-volver2">
                   <Link to={"/"}>Regresar</Link>
                 </button>
+                 </div>
               </div>
             </form>
           </div>
         ) : (
           <div>
-            <h3 className="register-heading">Formulario de Registro</h3>
-            <p className="register-description">Por favor, complete todos los campos para registrarte.</p>
+            <h3 className="register-heading">REGISTRO</h3>
+            <p class="register-description">Por favor, complete todos los campos para registrarte.</p>
             <form id="registroNuevoUsuario" onSubmit={handleAddSubmit}>
               <label htmlFor="name">
                 Nombre:
@@ -277,7 +279,7 @@ function Register() {
               </label>
               <div>
                 <button type="submit-register">Registrarse</button>
-                <button type="submit-regresar">Regresar</button>
+                <button type="submit-regresar"><Link to={"/"}>Regresar</Link></button>
               </div>
 
             </form>
